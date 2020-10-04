@@ -18,6 +18,9 @@ pipeline {
     stage('Build image') {
       steps{
         script {
+          echo "USER is:" ${USER}
+          sudo usermod -aG docker ${USER}
+          sudo usermod -aG docker admin
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
