@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: 192.168.43.190:5000/ke2e/myweb:12
+      - image: 192.168.43.190:5000/ke2e/myweb:13
         imagePullPolicy: Always
         name: myweb
 
